@@ -32,7 +32,7 @@
 
 > The outer loop will have time complexity of log n (Base-3 logarithm) so O(log n)
 
-> Inner loop not affected by the outer loops value so O(n)
+> Inner loop is not affected by the outer loops value so O(n)
 
 >> T(n) = O(logn) x O(n) = O(n logn)
 
