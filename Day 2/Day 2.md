@@ -14,8 +14,7 @@
 		{
 			arr[i] = arr[i + 1];
 		}
-/* Decrementing the size of the initial array */
-		n--;
+		n--;  /* Decrementing the size of the initial array */
 
 --------------------------------------------------------------------------------
 
@@ -28,8 +27,7 @@
 		{
 			arr[i] = arr[i + 1];
 		}
-/* Decrementing the size of the initial array */
-		n--;
+		n--; /* Decrementing the size of the initial array */
 	}
 
 ### Q2. Write the program for printing the array after rotating it k times towards left, where k would be taken as user input.
