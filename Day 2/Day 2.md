@@ -8,6 +8,8 @@
 */
 
 /* Deleting from Beginning */
+
+
 /* transfering the value of [i+1]th element to [i]th element */
 
 		for(i=0; i<n; i++)
@@ -19,7 +21,10 @@
 --------------------------------------------------------------------------------
 
 /* Deleting from any position k */
+
+
 /* transfering the value of [i+1]th element to [i]th element */
+
 
    if(k>0)
    {
@@ -29,6 +34,8 @@
 		}
 		n--; /* Decrementing the size of the initial array */
 	}
+
+	
 
 ### Q2. Write the program for printing the array after rotating it k times towards left, where k would be taken as user input.
 
