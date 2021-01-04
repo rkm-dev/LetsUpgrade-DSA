@@ -8,15 +8,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int data[10], top, max=0, min=0;
+int data[10], top, max=0, min=NULL;
 void push(int x)
 {
    top++;
    data[top]=x;
    if(max < data[top])
         max = data[top];
-   if(min > data[top])
+    if(min) {
+        if(min > data[top])
+            min = data[top];
+    } else {
         min = data[top];
+    }
 }
 
 void pop()
@@ -31,37 +35,40 @@ void pop()
     for(i= top;i>=0;i--) {
      if(max < data[i])
         max = data[i];
-     if(min > data[i])
-        min = data[i];
+     if(min) {
+        if(min > data[top])
+            min = data[top];
+    } else {
+        min = data[top];
+    }
     }
 }
 int main()
 {
     int elem, choice;
     top = -1;
-    do
-    {
-        printf("\n Choose one of the options");
-        printf("\n 1. Push an element\n 2. Pop an element\n 3. Display max value in the stack\n 4. Display min value in the stack");
-        printf("\n 5. Quit \n Enter your choice : ");
-        scanf("%d ",&choice);
+    do {
+        printf("\nChoose one of the options");
+        printf("\n1.Push an element \n2.Pop an element \n3.Display max value in the stack \n4.Display min value in the stack");
+        printf("\n5.Quit \nEnter your choice : ");
+        scanf("%d",&choice);
         switch(choice)
         {
-            case 1:
+            case 1 :
                 printf("\n Enter a number to be pushed into the stack : ");
-                scanf("%d ",&elem);
+                scanf("%d",&elem);
                 push(elem);
                 break;
-            case 2:
+            case 2 :
                 pop();
                 break;
-            case 3:
-                printf("\n The current Max value in the stack is : %d",max);
+            case 3 :
+                printf("\n The current Max value in the stack is : %d \n",max);
                 break;
-            case 4:
-                printf("\n The current Min value in the stack is : %d",min);
+            case 4 :
+                printf("\n The current Min value in the stack is : %d \n",min);
                 break;
-            case 5:
+            case 5 :
                 printf("\n Quit");
                 break;
             default:
@@ -70,5 +77,6 @@ int main()
     }while(choice!=5);
     return 0;
 }
+
 
 ```
